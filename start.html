@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        span {
+            display:block;
+            width: 120px;
+            height:40px;
+            background-color: green;
+            line-height: 40px;
+            text-align:center;
+            position: absolute;
+            top: 50px;
+            left:50px;
+            cursor:pointer;
+        }
+        div {
+            position:absolute;
+            top:90%;
+            left:10%;
+            width:0;
+            height:0;
+            background-color:brown;
+            transition:1s;
+        }
+        span:hover~div:nth-last-of-type(1) {
+            top:50%;
+            left:50%;
+            width:50vh;
+            height:30vh;
+            transform:translate(-50%, -50%);
+            z-index:1
+        }
+        span:hover~div:nth-last-of-type(2) {
+            top:calc(50% - 15vh);
+            left:50%;
+            width:calc(50vh/1.41);
+            height:calc(50vh/1.41);
+            transform:translate(-50%, -50%)rotate(45deg);
+            background-color:black;
+            transition-delay: .2s;
+            
+        }
+        span:hover~div:nth-last-of-type(3){
+            top:calc(50% - 25vh);
+            left:calc(50% + 15vh);
+            width:50px;
+            height:50px;
+            z-index: 1;
+            background-color: #555555;
+            z-index: 0;
+            transition-delay: .4s;
+        }
+        span:hover~div:nth-last-of-type(4) {
+            top:40%;
+            left:40%;
+            width:60px;
+            height:60px;
+            background-color: blue;
+            z-index:2;
+            transition-delay: .6s;
+
+        }
+        span:hover~div:nth-last-of-type(5) {
+            top:45%;
+            left:55%;
+            width:60px;
+            height:60px;
+            background-color: blue;
+            z-index:2;
+            transition-delay: .6s;
+            } 
+            span:hover~div:nth-last-of-type(6) {
+            top:54%;
+            left:50%;
+            width:60px;
+            height:120px;
+            background-color:greenyellow;
+            z-index:2;
+            transition-delay: .9s;
+            }
+        /* div.wall {
+            width: 300px;
+            height:200px;
+            background-color: brown;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            transition: 0.5s;
+        }
+        div.roof{
+            width:300px;
+            height:300px;
+            background-color:cornflowerblue;
+            position:absolute;
+            top:calc(50% - 190px);
+            left:calc(50% - 150px);
+            transform:;
+            z-index:-1;
+            overflow:hidden; */
+
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div class="wall"></div>
+    <div class="roof"></div>
+    <div class="chimney"></div>
+    <div class="door"></div>
+    <div class="windows"></div>
+    <div class="windows"></div>
+</body>
+
+</html>
